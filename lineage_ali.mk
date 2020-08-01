@@ -22,9 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from ali device
 $(call inherit-product, device/motorola/ali/device.mk)
 
-# Inherit from some AOSP common stuff.
+# Inherit from some LINEAGE common stuff.
 IS_PHONE := true
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
@@ -35,7 +35,7 @@ TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_ali
+PRODUCT_NAME := lineage_ali
 PRODUCT_DEVICE := ali
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := Moto G6

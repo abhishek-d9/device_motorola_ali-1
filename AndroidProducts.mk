@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_ali.mk
+    $(LOCAL_DIR)/lineage_ali.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_ali-user \
-    aosp_ali-userdebug \
-    aosp_ali-eng
+    lineage_ali-user \
+    lineage_ali-userdebug \
+    lineage_ali-eng
