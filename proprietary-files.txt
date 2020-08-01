@@ -3,10 +3,11 @@ product/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
 
 # Camera
--app/MotoSignatureApp/MotoSignatureApp.apk;PRESIGNED
-etc/permissions/privapp-permissions-com.motorola.camera2.xml
-etc/permissions/com.motorola.camera2.xml
--priv-app/MotCamera2/MotCamera2.apk;PRESIGNED
+product/app/MotoSignatureApp/MotoSignatureApp.apk
+product/app/MotoPhotoEditor/MotoPhotoEditor.apk
+product/etc/permissions/privapp-permissions-com.motorola.camera2.xml
+product/etc/permissions/privapp-permissions-com.motorola.arselfie.xml
+product/priv-app/MotCamera2/MotCamera2.apk
 vendor/lib/hw/camera.msm8953.so
 vendor/lib/libhal_dbg.so
 vendor/lib/libactuator_dw9714p.so
@@ -772,11 +773,11 @@ vendor/lib64/vendor.qti.hardware.factory@1.1.so
 vendor/lib64/vendor.qti.latency@2.0.so
 
 # Dolby - from river QPU30.52-2
--priv-app/daxService/daxService.apk
--app/MotoDolbyV3/MotoDolbyV3.apk
-etc/permissions/com.dolby.daxservice.xml
-etc/permissions/com.motorola.dolby.dolbyui.features.xml
-etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
+product/app/MotoDolbyV3/MotoDolbyV3.apk
+product/priv-app/daxService/daxService.apk
+vendor/etc/permissions/com.dolby.daxservice.xml
+vendor/etc/permissions/com.motorola.dolby.dolbyui.features.xml
+vendor/etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
 vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
 vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
 vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
@@ -1043,8 +1044,12 @@ vendor/lib64/motorola.hardware.audio.adspd@1.0.so
 
 # Moto Permissions
 product/etc/permissions/com.motorola.moto-uirefresh.xml
+product/etc/permissions/com.motorola.motosignature.xml
+product/etc/permissions/com.motorola.arselfie.xml
+product/etc/permissions/com.motorola.photoeditor.xml
 product/etc/permissions/com.motorola.motodisplay.xml
-etc/permissions/com.motorola.camera2.denali.xml:vendor/etc/permissions/com.motorola.camera2.denali.xml
+product/etc/permissions/com.motorola.camera2.xml
+product/etc/permissions/com.motorola.androidx.camera.extensions.xml
 
 # NxpNfc
 vendor/lib/libpn553_fw.so
