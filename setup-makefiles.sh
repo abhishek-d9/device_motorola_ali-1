@@ -46,4 +46,3 @@ write_makefiles "$MY_DIR"/proprietary-files.txt true
 
 # Finish
 write_footers
-LINEAGE
