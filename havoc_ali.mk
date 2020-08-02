@@ -31,7 +31,7 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
-TARGET_SCREEN_HEIGHT := 1920LINEAGE
+TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier. This must come after all inclusions
