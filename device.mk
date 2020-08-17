@@ -368,7 +368,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.post_boot.sh \
     init.hidl.sensor.rc \
-    init.safailnet.rc \
     init.qcom.sensors.sh \
     init.qti.fm.sh \
     init.qti.fm.rc \
