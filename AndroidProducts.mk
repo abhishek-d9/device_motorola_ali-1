@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ali.mk
+    $(LOCAL_DIR)/rr_ali.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ali-user \
-    lineage_ali-userdebug \
-    lineage_ali-eng
+    rr_ali-user \
+    rr_ali-userdebug \
+    rr_ali-eng
