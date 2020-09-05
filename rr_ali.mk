@@ -22,7 +22,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
 # Inherit from ali device
 $(call inherit-product, device/motorola/ali/device.mk)
 
-# Inherit from some Resurrection Remix common stuff.
+# Inherit some common Resurrection Remix stuff.
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_STOCK_ARCORE := true
 IS_PHONE := true
 $(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
@@ -48,7 +50,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="ali-user 8.1.0 OPPS28.85-13-2 d04a4 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := motorola/ali/ali:8.1.0/OPPS28.85-13-2/d04a4:user/release-keys
+BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
 
 # for specific
 $(call inherit-product, vendor/motorola/ali/ali-vendor.mk)

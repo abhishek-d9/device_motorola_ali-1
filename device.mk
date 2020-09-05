@@ -277,11 +277,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.ali
 
-# Livedisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service-sdm \
-    vendor.lineage.livedisplay@2.0-service-sysfs
-
 # Media (OMX)
 PRODUCT_PACKAGES += \
     android.hardware.media.omx \
@@ -314,9 +309,9 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
-# LineageActions
+# MotoActions
 PRODUCT_PACKAGES += \
-    LineageActions
+    MotoActions
 
 # Init
 PRODUCT_PACKAGES += \
@@ -368,6 +363,7 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.qcom.post_boot.sh \
     init.hidl.sensor.rc \
+    init.safailnet.rc \
     init.qcom.sensors.sh \
     init.qti.fm.sh \
     init.qti.fm.rc \
