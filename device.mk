@@ -314,9 +314,9 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     libandroid_net_32
 
-# LineageActions
+# MotoActions
 PRODUCT_PACKAGES += \
-    LineageActions
+    MotoActions
 
 # Init
 PRODUCT_PACKAGES += \
