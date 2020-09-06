@@ -21,7 +21,10 @@ import android.os.Bundle;
 import android.content.Context;
 import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.SwitchPreference;
 import android.hardware.fingerprint.FingerprintManager;
+import androidx.preference.PreferenceFragment;
 import android.view.MenuItem;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,9 +32,6 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.SwitchPreference;
-import androidx.preference.PreferenceFragment;
 
 import org.lineageos.settings.device.actions.Constants;
 
@@ -46,14 +46,6 @@ public class FPGestureSettingsFragment extends PreferenceFragment {
 
     private TextView mSwitchBarText;
     private Switch mFPGestureSwitch;
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        ActionBar actionbar = getActivity().getActionBar();
-        actionbar.setDisplayHomeAsUpEnabled(true);
-        actionbar.setTitle(R.string.fingerprint_gestures_title);
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -83,11 +75,11 @@ public class FPGestureSettingsFragment extends PreferenceFragment {
         mSwitchBarText.setText(isFPGestureEnabled() ? R.string.switch_bar_on :
                 R.string.switch_bar_off);
     }
-
+    
     private void updatePrefs(boolean enabled){
         Editor prefEditor = PreferenceManager.getDefaultSharedPreferences(getActivity()).edit();
         prefEditor.putBoolean(FP_HOME_KEY, enabled);
-        prefEditor.apply();
+        prefEditor.apply(); 
         mFPScreenOnCategory.setEnabled(enabled);
         mFPScreenOffGesture.setEnabled(enabled);
         mFPScreenOffCategory.setEnabled(enabled);
@@ -97,7 +89,7 @@ public class FPGestureSettingsFragment extends PreferenceFragment {
             mFPScreenOffCategory.setEnabled(!hasEnrolledFingerprints);
         }
     }
-
+    
     private boolean isFPGestureEnabled(){
         return Constants.isPreferenceEnabled(getActivity(), FP_HOME_KEY);
     }
